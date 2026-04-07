@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LAKHAL STORتجات </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Splash Screen Animation -->
+<div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+        <div class="splash-logo">
+            <span class="logo-text">🛍️</span>
+        </div>
+        <h1 class="splash-title">LAKHAL STOR</h1>
+        <p class="splash-subtitle">متجرك الرقمي الأول</p>
+        <div class="splash-loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <h1>LAKHAL STOR</h1>
+        </div>
+        <nav class="nav">
+            <a href="#products" class="nav-link">المنتجات</a>
+            <a href="events.html" class="nav-link">الأحداث</a>
+            <a href="news.html" class="nav-link">أخبارنا</a>
+            <a href="top-contributors.html" class="nav-link">المميزين</a>
+            <a href="#contact" class="nav-link">تواصل معنا</a>
+        </nav>
+        <div class="header-actions">
+            <button class="cart-header-btn" id="cartHeaderBtn" title="السلة">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Live Purchase Notifications -->
+<div class="live-notifications-container">
+    <div id="liveNotifications" class="live-notifications"></div>
+</div>
+
+<section class="hero">
+    <div class="container">
+        <h2>مرحباً بك في متجرنا الرقمي</h2>
+        <p>احصل على أفضل المنتجات </p>
+    </div>
+</section>
+
+<section id="products" class="products">
+    <div class="container">
+        <h2 class="section-title">منتجاتنا</h2>
+        <div id="productsContainer" class="products-grid"></div>
+    </div>
+</section>
+
+<!-- Featured Product Banner -->
+<section class="featured-banner">
+    <div class="banner-container">
+        <div class="banner-content">
+            <div class="banner-text">
+                <h2 class="banner-title">🎮 Emergency Emden</h2>
+                <p class="banner-subtitle">حساب احترافي على Roblox</p>
+                <div class="banner-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">👤</span>
+                        <span>Username: mohammed_amine95</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🗺️</span>
+                        <span>أكثر المابات: Emergency Emden</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✨</span>
+                        <span>أكثر من 4 Gamepass حصرية</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🚀</span>
+                        <span>حزمة تعديل السيارات الكاملة</span>
+                    </div>
+                </div>
+                <div class="banner-stats">
+                    <div class="stat">
+                        <div class="stat-number">4+</div>
+                        <div class="stat-label">Gamepasses</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">⭐</div>
+                        <div class="stat-label">احترافي 100%</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">💎</div>
+                        <div class="stat-label">حصري</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary banner-cta" onclick="scrollToProduct()">شراء الآن</button>
+            </div>
+            <div class="banner-visual">
+                <div class="banner-emoji">🎮</div>
+                <div class="floating-elements">
+                    <span class="float-item" style="animation-delay: 0s;">🚗</span>
+                    <span class="float-item" style="animation-delay: 0.5s;">✈️</span>
+                    <span class="float-item" style="animation-delay: 1s;">🚁</span>
+                    <span class="float-item" style="animation-delay: 1.5s;">⚙️</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">📞 تواصل معنا</h2>
+
+        <div class="contact-wrapper">
+            <div class="contact-form-wrapper">
+                <div class="form-header">
+                    <h3>✉️ أرسل لنا رسالة</h3>
+                    <p>سنرد على رسالتك في أسرع وقت</p>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل *</label>
+                        <input type="text" id="name" placeholder="أدخل اسمك" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني *</label>
+                        <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">الموضوع *</label>
+                        <input type="text" id="subject" placeholder="موضوع الرسالة" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">الرسالة *</label>
+                        <textarea id="message" placeholder="اكتب رسالتك هنا" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block submit-btn">
+                        <span class="btn-text">إرسال الرسالة</span>
+                        <span class="btn-icon">✉️</span>
+                    </button>
+                </form>
+                <div id="statusMessage" class="status-message"></div>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-header">
+                    <h3>📍 معلومات التواصل</h3>
+                    <p>اختر الطريقة المفضلة للتواصل معنا</p>
+                </div>
+                
+                <div class="contact-cards">
+                    <div class="contact-card email-card">
+                        <div class="card-icon">📧</div>
+                        <h4>البريد الإلكتروني</h4>
+                        <p>lakhalstor@gmail.com</p>
+                        <a href="mailto:lakhalstor@gmail.com" class="card-btn">أرسل بريد</a>
+                    </div>
+
+                    <div class="contact-card phone-card">
+                        <div class="card-icon">📱</div>
+                        <h4>الهاتف</h4>
+                        <p>+212 704 973 576</p>
+                        <a href="tel:+212704973576" class="card-btn">اتصل بنا</a>
+                    </div>
+
+                    <div class="contact-card whatsapp-card">
+                        <div class="card-icon">💚</div>
+                        <h4>واتساب</h4>
+                        <p>رسائل فورية وسريعة</p>
+                        <a href="https://wa.me/964704973576" target="_blank" class="card-btn">افتح واتساب</a>
+                    </div>
+                </div>
+
+                <div class="contact-info-box">
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div>
+                            <strong>ساعات العمل</strong>
+                            <p>متاح 24/7</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⚡</span>
+                        <div>
+                            <strong>وقت الرد</strong>
+                            <p>أقل من ساعة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; جميع  </p>
+    </div>
+</footer>
+
+<!-- Floating Action Buttons -->
+<div class="floating-action-menu">
+    <button class="fab-main" id="fabMain" title="قائمة المساعدة">
+        <span class="fab-icon">💬</span>
+    </button>
+    <div class="fab-menu">
+        <a href="https://wa.me/964704973576" target="_blank" class="fab-item" title="تواصل عبر واتساب">
+            <span class="fab-icon-small">💚</span>
+            <span class="fab-label">واتساب</span>
+        </a>
+        <a href="mailto:lakhalstor@gmail.com" class="fab-item" title="أرسل بريد إلكتروني">
+            <span class="fab-icon-small">📧</span>
+            <span class="fab-label">بريد</span>
+        </a>
+        <a href="#contact" class="fab-item" title="اذهب إلى التواصل">
+            <span class="fab-icon-small">📞</span>
+            <span class="fab-label">اتصل</span>
+        </a>
+        <button class="fab-item" onclick="scrollToTop()" title="اذهب للأعلى">
+            <span class="fab-icon-small">⬆️</span>
+            <span class="fab-label">أعلى</span>
+        </button>
+    </div>
+</div>
+
+<!-- Cart Modal -->
+<div class="cart-modal" id="cartModal">
+    <div class="cart-modal-content">
+        <div class="cart-modal-header">
+            <h2>🛒 سلة التسوق</h2>
+            <button class="cart-modal-close" onclick="closeCartModal()">✕</button>
+        </div>
+        <div class="cart-modal-body">
+            <div id="cartItemsContainer" class="cart-items-container">
+                <!-- Cart items will be displayed here -->
+            </div>
+        </div>
+        <div class="cart-modal-footer">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>عدد المنتجات:</span>
+                    <span id="cartItemCount" class="cart-count-display">0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>الإجمالي:</span>
+                    <span id="cartTotal" class="cart-total-display">$0</span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary" onclick="closeCartModal()">إغلاق</button>
+                <button class="btn btn-primary" onclick="proceedToCheckout()">إتمام الشراء</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div id="checkoutModal" class="cart-modal">
+    <div class="cart-modal-content">
+        <div class="cart-modal-header">
+            <h2>💳 إتمام الشراء</h2>
+            <button class="cart-modal-close" onclick="closeCheckoutModal()">✕</button>
+        </div>
+        <div class="cart-modal-body" style="overflow-y: auto;">
+            <form id="checkoutForm" class="purchase-form">
+                <div style="background: var(--primary-light); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+                    <h4 style="color: var(--dark-color); margin-bottom: 12px;">📦 ملخص الطلب:</h4>
+                    <div id="checkoutSummary"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkoutName">الاسم الكامل *</label>
+                    <input type="text" id="checkoutName" placeholder="أدخل اسمك" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkoutEmail">البريد الإلكتروني *</label>
+                    <input type="email" id="checkoutEmail" placeholder="بريدك الإلكتروني" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkoutPhone">رقم الهاتف *</label>
+                    <input type="tel" id="checkoutPhone" placeholder="رقم هاتفك" required>
+                </div>
+
+                <div class="form-group" style="margin-top: 20px; padding-top: 20px; border-top: 2px solid var(--border-color);">
+                    <label>💳 طريقة الدفع:</label>
+                    <div style="background: rgba(94, 114, 228, 0.1); padding: 12px; border-radius: 8px; margin-top: 8px; color: var(--dark-color);">
+                        🔐 MT CASH - تحويل آمن وسريع
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 24px;">
+                    <button type="button" class="btn btn-secondary" onclick="closeCheckoutModal()" style="flex: 1;">إلغاء</button>
+                    <button type="submit" class="btn btn-primary" style="flex: 1;">تأكيد الطلب ✓</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
